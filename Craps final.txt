@@ -1,0 +1,147 @@
+def valor_inicial():
+valor_inicial = input("Coloque um valor inicial de fichas: ")
+return valor_inicial
+
+def valor_da_aposta()
+aposta = input("Coloque o valor da aposta: ")
+return aposta
+
+def validade_da_aposta(valor_inicial,aposta)
+if aposta <= valor_inicial:
+return (True)
+else:
+return (False)
+
+def jogar_dados():
+numeros = randit(0,0)
+return numeros
+
+def calculo_da_soma_dos_dados(dado1_valor,dado2_valor):
+soma_dados = int(dado1_valor) + int(dado2_valor)
+return soma_dados
+
+def valor_primeira_rodada(soma_dados):
+if soma_dados == 7 or soma_dados == 11:
+return 'ganhou'
+elif soma_dados == 2 or soma_dados == 3 or soma_dados == 12:
+return 'derrota'
+else:
+return 'point'
+
+def proxima_rodada(soma_dados,valor_point):
+if soma_dados == valor_point:
+return 'point'
+elif soma_dados == 7:
+return 'derrota'
+else:
+return 'nada'
+
+def continuacao_do_jogo():
+jogo = input('Quer continuar o jogo?')
+if jogo == 'Sim':
+return (True)
+if jogo == 'Nao':
+return False
+
+if valor_primeira_rodada(soma_dados) == 'ganhou':
+valor_inicial = valor_inicial + valor_da_aposta
+print ("valor_inicial:", valor_inicial)
+
+if valor_primeira_rodada(soma_dados) == 'derrota':
+valor_inicial = valor_inicial - valor_da_aposta
+print ("valor_inicial:",valor_inicial)
+
+if valor_primeira_rodada(soma_dados) == 'point':
+valor_point = soma_dados
+dado1 = jogar_dados()
+dado2 = jogar_dados()
+soma_dados = calculo_da_soma_dos_dados(dado1,dado2)
+
+def continuacao_do_jogo():
+jogo = input('Quer continuar o jogo?')
+if jogo == 'Sim':
+return (True)
+if jogo == 'Nao':
+return False
+
+def field(soma_dados):
+aposta = input(" Coloque o valor da sua aposta: "):
+print valor_da_aposta
+if soma_dados == 5 or soma_dados == 6 or soma_dados == 7 or soma_dados == 8:
+valor_inicial = valor_inicial - aposta
+if soma_dados == 3 or soma_dados == 4 or soma_dados == 9 or soma_dados == 10 or soma_dados == 11:
+valor_inicial = valor_inicial + aposta
+if soma_dados == 2:
+valor_inicial == aposta*2 + valor_inicial
+if soma_dados == 12:
+valor_inicial = aposta*4 + valor_inicial
+return valor_inicial
+
+def continuacao_do_jogo():
+jogo = input('Quer continuar o jogo?')
+if jogo == 'Sim':
+return (True)
+if jogo == 'Nao':
+return False
+
+def any_craps(soma_dados):
+if soma_dados == 2 or soma_dados == 3 or soma_dados == 12:
+valor_inicial = valor_da_aposta*7 + valor_inicial
+return valor_inicial
+
+def continuacao_do_jogo():
+jogo = input('Quer continuar o jogo?')
+if jogo == 'Sim':
+return (True)
+if jogo == 'Nao':
+return False
+
+def twelve (soma_dados):
+aposta = input(" Coloque o valor da aposta: ")
+print aposta
+if soma_dados == 12:
+valor_inicial = aposta*30 + valor_inicial
+return valor_inicial
+else:
+return 'nada'
+
+def continuacao_do_jogo():
+jogo = input('Quer continuar o jogo?')
+if jogo == 'Sim':
+return (True)
+if jogo == 'Nao':
+return False
+
+def field_e_any_craps(soma_dados):
+aposta = input("Coloque o valor da aposta: ")
+if soma_dados == 5 or soma_dados == 6 or soma_dados == 7 or soma_dados == 8:
+valor_inicial = valor_inicial - aposta
+if soma_dados == 4 or soma_dados == 9 or soma_dados == 10 or soma_dados == 11:
+valor_inicial = valor_inicial + aposta
+if soma_dados == 2 or soma_dados == 3 or soma_dados == 3:
+valor_inicial = valor_inicial + aposta*7
+return valor_inicial
+
+def field_e_twelve(soma_dados):
+aposta = input("Coloque o valor da aposta: ")
+print valor_da_aposta
+if soma_dados == 5 or soma_dados == 6 or soma_dados == 7 or soma_dados == 8:
+valor_inicial = valor_inicial - aposta
+if soma_dados == 3 or soma_dados == 4 or soma_dados == 9 or soma_dados == 10 or soma_dados == 11:
+valor_inicial = valor_inicial + aposta
+if soma_dados == 2:
+valor_inicial == aposta*2 + valor_inicial
+if soma_dados == 12:
+valor_inicial = aposta*30 + valor_inicial
+return valor_inicial
+
+def any_craps_e_twelve(soma_dados):
+aposta = input("Coloque o valor da aposta: ")
+return aposta
+if soma_dados == 2 or soma_dados == 3:
+valor_inicial = valor_inical + aposta*7
+if soma_dados == 12:
+valor_inicial = valor_inicial + aposta*30
+else:
+valor_inicial = valor_inicial - aposta
+print valor_inicial
